@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class two;
+class one{
+    int data;
+    public:
+    void input(int value){
+        data=value;
+    }
+    friend void add (one two);
+};
+class two
+{
+void add(one obj1,two obj2)
+{
+    class one and two
+}
+};
+int main()
+{
+    one A;
+    two B;
+    A.input(30);
+    B.input(70);
+    add (A,B);
+    return 0;
+}

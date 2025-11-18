@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+class animal{
+    public:
+    eat(){
+        cout<<"animal is eating"<<endl;
+    }
+};
+class bird:public animal
+{
+    public:
+    fly(){
+        cout<<"bird is flying"<<endl;
+    }
+};
+int  main(){
+    bird B;
+    B.eat();
+    B.fly();
+}

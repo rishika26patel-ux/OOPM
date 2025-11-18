@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class myclass{
+    int x;
+    float y;
+    public:
+    myclass(){
+        x=0;
+        y=2;
+    }
+    myclass(const myclass &other)  {
+        x = other.x;
+        y = other.y;
+    }
+    void display(){
+        cout<<"x:" << x <<",y:" << y << endl;
+    }
+};
+int main(){
+    myclass m1;
+    m1.display();
+
+    myclass m2;
+    m2.display();
+
+    return 0;
+}

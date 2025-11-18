@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class mother{
+    public:
+    void eye()
+    {
+        cout<<"eye colour is blue"<<endl;
+    }
+};
+class father{
+    public:
+    void skin()
+    {
+        cout<<"skin colour is brown"<<endl;
+    }
+};
+class child{
+    public:
+  void result()
+    {
+        cout<<"the child look like"
+    }
+}

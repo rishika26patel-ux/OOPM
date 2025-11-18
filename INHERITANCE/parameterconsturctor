@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class myclass{
+    myclass(int a, string s){
+
+        }
+        myclass(const myclass &s){
+            age=s.age;
+            name=s.name;
+        }
+        void display(){
+            cout<<"age is:"<<age<<",name is:"<<name<<endl;
+        }
+};
+int main(){
+    myclass abj1(18,"RISHIKA");
+
+    myclass obj2(obj1);
+    myclass obj3(obj1);
+    obj3.display();
+    myclass obj4(obj1);
+    return 0;
+}

@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+class animal{
+    void eat(){
+        cout<<"animal is eating\n";
+    }
+};
+class mammal:virtual public animal{
+    public:
+    void run(){
+        cout<<"mammal is running\n";
+    }
+};
+class bird:virtual public animal{
+    public:
+    void fly(){
+        cout<<"bird is flying\n";
+    }
+};
+int main()

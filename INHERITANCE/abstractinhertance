@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+class myclass{
+    public:
+   virtual void myshoes()=0;
+};
+class me:public myclass{
+    public:
+     virtual void myshoes() override{
+        cout<<"these are my shoes "<<endl;
+    }
+};
+int main(){
+    me m1;
+    m1.myshoes();
+    return 0;
+}

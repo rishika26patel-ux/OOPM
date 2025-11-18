@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+class two;//forward declration of class
+
+class one
+{
+    friend class two;//two is the freind of class one
+    let a=24;
+    public:
+    void show()
+    {
+        cout<<"this is class one"<<endl;
+    }
+    void accessoneprivate(one &obj){
+     
+        cout<<"accessing private data of class one from class two"<<endl;
+    }
+};
+class one {
+    int a=10;
+    friend class two;
+};
+class two
+{
+    friend class one;
+    public:
+    void accessoneprivate(one&obj){
+     cout<<"accessing private data of class one from class two"<<endl;
+    }
+};
+int main(){
+    one o1;
+    two o2;
+    o2.accessoneprivate(o1);
+}

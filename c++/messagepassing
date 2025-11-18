@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+class TV{
+    private:
+    bool is On;
+    public:
+    void control(bool x){
+        is On=x;
+    }
+    void getstatus(){
+        if(isOn)cout<<"TV is On";
+    }
+        else{ cout<<"TV is Off";
+    }
+
+class Remote{
+    public:
+    void controlTV(TV&a,boolx)
+    a.control(x);
+}
+}
+int main(){
+    TV t1;
+    Remote r1;
+    r1.controlTV(t1,true);
+    t1.getstatus();
+};
+
+
+
+
+//MESSAGE PASSING
+//c++ implements message passing by enebling us to control one objrct from another by passing messsages or values.
+
+//create another variable int volume in tv class
+//create a function intTV that increases or decreasses the value. Assume that the initial valume of tv is 0.
+//create a function in remote clsass that can control the volume of TV.
