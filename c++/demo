@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class demo{
+    public:
+    int x;
+    demo(){
+        x=2;
+        cout<<"constructed\n";
+    }
+    ~demo(){
+        cout<<"destructed\n";
+    }
+}
+int main(){
+    demo a;
+    {
+        demo b;
+    }
+    demo*c=new demo;
+}
+
+
+//Q=write a c++ programm to demonstrate dynamic polymorphism and dynamic dispatch.

@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class A{
+    private:
+    int x;
+    protected:
+    int y;
+    public:
+    int z;
+};
+
+class B:public A{
+    // x-> not accesible
+    // y-> protected
+    // z-> public
+
+};
+class C:protected A{
+    // x-> not accesible
+    // y-> protected                  
+    // z-> protected                
+};
+class D :private A{
+   // x-> not accesible
+    // y-> private
+    // z-> private
+};
+
+
+
+
