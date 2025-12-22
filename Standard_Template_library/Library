@@ -21,7 +21,10 @@ int main(){
     //declation and initiliazation
     vector <int> a ={1,2,3,4,5};  // <int> vector intizer ko hold karega
     a.reserve(100);
-    cout<<a.size()<< " "<<a.capacity()<<end l;
+    cout<<a.size()<< " " <<a.capacity()<<end l;
    // a.push_back(6);
      // cout<<a.size()<< " "<<a.capacity()<<end l;
 }
+
+
+// every sequential STL can be iterated using an iterated class .this class gives us pointers to various location in a vector and with the help of these pointer we can acces and modifie the vector
