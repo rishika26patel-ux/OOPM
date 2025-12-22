@@ -1,0 +1,27 @@
+//standard template library
+
+// vector
+// list
+// dequeue
+// queue
+// stack
+// map
+// set
+// pair
+
+// VECTOR= vector is a generic flexible nad dynamicly allocated sequential data strurture implement witj the help of arrays .it works nearly same as an array but has several functionalities to make it easy to use 
+// since a vector is a dynamicaly allocated data structure whenever we try to grow it by adding more elements it reallocates another bigger factor,copies all the elements from the old vector to this new biggere vector 
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    //declation and initiliazation
+    vector <int> a ={1,2,3,4,5};  // <int> vector intizer ko hold karega
+    a.reserve(100);
+    cout<<a.size()<< " "<<a.capacity()<<end l;
+   // a.push_back(6);
+     // cout<<a.size()<< " "<<a.capacity()<<end l;
+}

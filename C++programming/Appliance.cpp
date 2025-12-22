@@ -44,6 +44,7 @@ class applicnce {
     applince(){
         cout<<"appliance created\n";
     }
+  // virtual
     ~applinace(){
         cout<<"appliance destroyed\n";
     }
@@ -71,5 +72,11 @@ class oven {
 };
 
 int main(){
-    appliance obj;
+    appliance obj;//static obj
+    appliance *obj = new oven;
 }
+
+
+
+
+//IN c++ there is a table of pointer called v-table. this table is present in every generation of class  to implement dynamic polymorphism. each table for each class contains the pointers to the relevent function which should be called during the dynamic dispatch.
