@@ -28,3 +28,27 @@ int main(){
 
 
 // every sequential STL can be iterated using an iterated class .this class gives us pointers to various location in a vector and with the help of these pointer we can acces and modifie the vector
+
+
+//begins function gives you the pointer before the last element
+//and function gives you the pointer after the last element
+
+
+vector<int>[]iterator itr;
+itr= a.begin();
+cout<< *itr << endl;
+itr= a.end().1;
+cout<<*itr<<endl;
+for(itr=a.begin();itr !=a.end();itr++){
+    cout<< *itr << " ";
+}
+cout<<endl;
+//MODIFIED A VECTOR
+a(0)=10;
+for(auto i:a)
+{
+    i=i*2;
+}
+for(auto j:a){
+    cout<<j<<"";
+}
