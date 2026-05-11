@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+
+class animal{
+    public:
+    void eat(){
+        cout<<"dog is eating food"<<endl;
+    }
+};
+int main(){
+    eat();
+    return 0;
+}

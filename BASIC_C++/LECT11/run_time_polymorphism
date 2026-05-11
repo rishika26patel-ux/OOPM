@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+
+class Animal{
+    public:
+    void eat(){
+        cout<<"eatt food....."<<endl;
+    }
+};
+int main(){
+    Animal:void eat();
+    return 0;
+}

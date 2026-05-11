@@ -1,0 +1,86 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class BankAccount{
+    protected:
+    string accountHolderName;
+    double balance;
+    public:
+    BankAccount(string name,double initialBalance):accountHolderName(name),balance(initialBalance){}
+    virtual void displayAccountDetails(){
+        cout<<"Account Holder:"<<accountHolderName<<endl;
+        cout<<"Balance:"<<balance<<endl;
+    }
+    virtual void calculateInterest(){
+        cout<<"no specific interest rate applied for base account"<<endl;
+    }
+    virtual ~BankAccount(){
+
+    };
+
+    class SavingsAccount:public BankAccount{
+        private:
+        double interestRate;
+        public:
+        SavingsAccount(string name,double initialBalance,double rate):BankAccount(name,initialBalance),interestRate(rate){}
+
+
+        void CalculateInterest() override{
+            double interest = balance * (interestRate/100);
+            cout<<"saving account interest:"<<interset<<endl;
+        }
+        void displayAccountDetails() override{
+            cout<<"saving amount holder:"<<accountHolderName<<endl;
+            cout<<"Balance:"<<balance<<endl;
+            cout<<"interest rate:"<<interestRate<<"%"<<endl;
+        }
+    };
+    class CurrentAccount:public BankAccount{
+        private:
+        double overdraftLimit;
+        public:
+        CurrentAccount(string name,double initialBalance,double overdraft):BankAccount(name,initialBalance),overdraftLimit(overdraft){}
+    }
+    void calculateInterest()override{
+        cout<<"current account has no interest applied"<<endl;
+    }
+};
+
+class BankingOperations{
+    public:
+    void deposit(double amount,double & balance){
+        balance +=amount;
+        cout<<"deposited"<<amount<<"new balance:"<<balance <<endl;
+    }
+    void deposit(double amount,double&balance,double bonus){
+        balance+=amount + bonus;
+        cout<<"deposited"<<amount<<"with bonus"<<bonus<<"new balance:"<<balnce<<endl;
+    }
+};
+
+
+int main(){
+    double balance = 1000.0;
+    BankingOperations operations;
+    operations.deposit(500.0,balance);
+    operations.deposit(500.0,balance,50.0);
+
+    cout<<"\n";
+
+    BankAccount * account1=new SavingsAccount("alice",2000.0,5.0);
+    BankAccount * account2=new CurrentAccount("bob",1500.0,500.0);
+
+    account1->displayAccountDetails();
+    account1->calculateInterest();
+
+    cout<<"\n";
+
+    account2->displayAccountDetails();
+    account2->calculateInterest();
+
+    delete account1;
+    delete account2;
+
+    return 0;
+}
